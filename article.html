@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeLog - Reading Data...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="pokedex-sensor-array">
+                <div class="sensor-big"></div>
+                <div class="sensor-small red"></div>
+                <div class="sensor-small yellow"></div>
+                <div class="sensor-small green"></div>
+            </div>
+            <div class="logo">
+                <a href="index.html">&lt;PokeLog /&gt;</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Dex</a></li>
+                    <li><a href="types.html">Types</a></li>
+                    <li><a href="berries.html">Berries</a></li>
+                    <li><a href="trainer.html">Trainer</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search data...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <!-- Pokeball Toggle -->
+                 <button class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="pokeball-icon"></div>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main class="content-area">
+            
+            <div id="article-view">
+                <!-- Dynamic Content Loads Here -->
+                <div class="loading-state" style="text-align: center; padding: 50px;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--pk-red);"></i>
+                    <p style="margin-top: 20px; font-family: var(--font-heading);">Reading Data Cylinder...</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="index.html" class="read-more" style="background: var(--pk-black); border-color: #555;">&lt; Back to Dex</a>
+            </div>
+
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget pokedex-widget">
+                 <div class="pokedex-screen-header">
+                     <div class="tiny-lights">
+                        <span></span><span></span>
+                     </div>
+                </div>
+                <div class="pokedex-screen">
+                    <div id="buddy-container">
+                        <div class="loading-text">Scanning...</div>
+                    </div>
+                </div>
+                <div class="pokedex-controls">
+                     <div class="d-pad"></div>
+                     <div class="action-btn"></div>
+                </div>
+                <h3 class="buddy-name" id="buddy-name">???</h3>
+                <p class="buddy-info">Wild Coding Buddy appearing...</p>
+                 <button id="refresh-buddy" class="refresh-btn">Scan New</button>
+            </div>
+
+            <!-- Wild Bug Battle Widget -->
+            <div class="widget battle-widget">
+                <h4 class="widget-title" style="color: var(--pk-red);">Wild Bug Event!</h4>
+                <div class="battle-scene">
+                    <div class="enemy-area">
+                        <div class="hp-bar-container">
+                            <span class="hp-text">BUG</span>
+                            <div class="hp-bar"><div class="hp-fill" style="width: 100%;"></div></div>
+                        </div>
+                        <div class="enemy-sprite">👾</div>
+                    </div>
+                    <div class="battle-dialog-box">
+                        <p id="battle-text">A wild SYNTAX ERROR appeared!</p>
+                        <div id="battle-options" class="battle-options-grid">
+                            <button class="battle-option">FIGHT</button>
+                            <button class="battle-option">BAG</button>
+                            <button class="battle-option">RUN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget categories-widget">
+                <h4 class="widget-title">Data Types</h4>
+                <ul id="categories-list">
+                    <!-- Dynamic Categories -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline init for individual page logic or stick to script.js
+        document.addEventListener('DOMContentLoaded', () => {
+           loadArticle(); 
+        });
+    </script>
+</body>
+</html>

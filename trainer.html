@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeLog - Trainer Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+         <div class="container header-inner">
+            <div class="pokedex-sensor-array">
+                <div class="sensor-big"></div>
+                <div class="sensor-small red"></div>
+                <div class="sensor-small yellow"></div>
+                <div class="sensor-small green"></div>
+            </div>
+            <div class="logo">
+                <a href="index.html">&lt;PokeLog /&gt;</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dex</a></li>
+                    <li><a href="types.html">Types</a></li>
+                    <li><a href="berries.html">Berries</a></li>
+                    <li><a href="trainer.html" class="active">Trainer</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                 <button class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="pokeball-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main class="content-area" style="grid-column: 1 / -1;">
+            
+            <div class="trainer-card" style="background: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png') no-repeat center right; background-color: #eee; border: 4px solid var(--pk-black); border-radius: 15px; padding: 40px; max-width: 800px; margin: 0 auto; box-shadow: 10px 10px 0 rgba(0,0,0,0.2);">
+                
+                <div class="trainer-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--pk-black); padding-bottom: 20px; margin-bottom: 20px;">
+                    <div>
+                        <h1 style="font-family: var(--font-heading); color: var(--pk-blue); text-shadow: 2px 2px 0 var(--pk-black);">DEV PROFILE</h1>
+                        <p>STATUS: OPEN TO WORK</p>
+                    </div>
+                    <div>
+                        <h2 style="font-family: var(--font-heading);">Alex Coder</h2>
+                    </div>
+                </div>
+
+                <div class="trainer-body" style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+                    
+                    <div class="trainer-photo" style="flex-shrink: 0;">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Trainer" style="width: 200px; height: 200px; border: 4px solid var(--pk-black); object-fit: cover; background: #fff;">
+                        <div style="margin-top: 15px; text-align: center;">
+                             <a href="#" style="color: #333; margin: 0 5px;"><i class="fab fa-github fa-2x"></i></a>
+                             <a href="#" style="color: #333; margin: 0 5px;"><i class="fab fa-linkedin fa-2x"></i></a>
+                             <a href="#" style="color: #333; margin: 0 5px;"><i class="fas fa-envelope fa-2x"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="trainer-stats" style="flex-grow: 1; min-width: 300px;">
+                        <div class="stat-row" style="margin-bottom: 15px;">
+                            <strong style="display: inline-block; width: 120px; font-family: var(--font-heading); font-size: 0.8rem;">Role:</strong>
+                            <span>Full Stack Engineer</span>
+                        </div>
+                        <div class="stat-row" style="margin-bottom: 15px;">
+                            <strong style="display: inline-block; width: 120px; font-family: var(--font-heading); font-size: 0.8rem;">Exp:</strong>
+                            <span>5+ Years</span>
+                        </div>
+                        <div class="stat-row" style="margin-bottom: 15px;">
+                            <strong style="display: inline-block; width: 120px; font-family: var(--font-heading); font-size: 0.8rem;">Focus:</strong>
+                            <span>Scalability, UI/UX</span>
+                        </div>
+                        <div class="stat-row" style="margin-bottom: 15px;">
+                            <strong style="display: inline-block; width: 120px; font-family: var(--font-heading); font-size: 0.8rem;">Location:</strong>
+                            <span>Remote / Digital World</span>
+                        </div>
+
+                         <div class="badges" style="margin-top: 30px;">
+                            <h3 style="font-family: var(--font-heading); font-size: 0.8rem; margin-bottom: 10px;">SKILLS OBTAINED</h3>
+                            <div class="badge-row" style="display: flex; gap: 10px;">
+                                <div class="badge" style="width: 40px; height: 40px; background: #F0DB4F; border: 2px solid black; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #323330;" title="JavaScript"><i class="fab fa-js"></i></div>
+                                <div class="badge" style="width: 40px; height: 40px; background: #61dafb; border: 2px solid black; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #282c34;" title="React"><i class="fab fa-react"></i></div>
+                                <div class="badge" style="width: 40px; height: 40px; background: #3c873a; border: 2px solid black; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;" title="Node"><i class="fab fa-node-js"></i></div>
+                                <div class="badge" style="width: 40px; height: 40px; background: #F05032; border: 2px solid black; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;" title="Git"><i class="fab fa-git-alt"></i></div>
+                                <div class="badge" style="width: 40px; height: 40px; background: #3776AB; border: 2px solid black; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;" title="Python"><i class="fab fa-python"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="trainer-footer" style="margin-top: 30px; border-top: 2px solid var(--pk-black); padding-top: 10px; text-align: center; font-size: 0.8rem;">
+                    "Hello world, one line at a time."
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

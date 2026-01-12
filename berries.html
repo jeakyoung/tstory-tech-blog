@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeLog - Berries (Snippets)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+         <div class="container header-inner">
+            <div class="pokedex-sensor-array">
+                <div class="sensor-big"></div>
+                <div class="sensor-small red"></div>
+                <div class="sensor-small yellow"></div>
+                <div class="sensor-small green"></div>
+            </div>
+            <div class="logo">
+                <a href="index.html">&lt;PokeLog /&gt;</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Dex</a></li>
+                    <li><a href="types.html">Types</a></li>
+                    <li><a href="berries.html" class="active">Berries</a></li>
+                    <li><a href="trainer.html">Trainer</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Search berries...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                 <button class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="pokeball-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main class="content-area">
+            
+            <h1 class="section-title">Code Repository</h1>
+            
+            <div class="berries-list">
+                
+                <!-- Snippet Item -->
+                <div class="berry-item" style="border-bottom: 2px dashed var(--border-color); padding: 20px 0; display: flex; gap: 20px; align-items: flex-start;">
+                    <div class="berry-icon" style="font-size: 2rem; color: #61DAFB; width: 40px; text-align: center;"><i class="fab fa-react"></i></div>
+                    <div class="berry-info">
+                        <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: 5px;">useFetch Hook</h3>
+                        <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 0.85rem; overflow-x: auto;">
+const { data, loading, error } = useFetch(url);
+                        </p>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">Standard custom hook for async data fetching.</p>
+                    </div>
+                </div>
+
+                <!-- Snippet Item -->
+                <div class="berry-item" style="border-bottom: 2px dashed var(--border-color); padding: 20px 0; display: flex; gap: 20px; align-items: flex-start;">
+                    <div class="berry-icon" style="font-size: 2rem; color: #F0CF30; width: 40px; text-align: center;"><i class="fab fa-js"></i></div>
+                    <div class="berry-info">
+                        <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: 5px;">Debounce Utility</h3>
+                        <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 0.85rem; overflow-x: auto;">
+function debounce(fn, ms) {
+  let timer;
+  return (...) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...), ms);
+  };
+}
+                        </p>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">Prevents function from firing too often.</p>
+                    </div>
+                </div>
+
+                 <!-- Snippet Item -->
+                <div class="berry-item" style="border-bottom: 2px dashed var(--border-color); padding: 20px 0; display: flex; gap: 20px; align-items: flex-start;">
+                    <div class="berry-icon" style="font-size: 2rem; color: #2965F1; width: 40px; text-align: center;"><i class="fab fa-css3"></i></div>
+                    <div class="berry-info">
+                        <h3 style="font-family: var(--font-heading); font-size: 1rem; margin-bottom: 5px;">Grid Center</h3>
+                        <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 0.85rem; overflow-x: auto;">
+place-items: center;
+display: grid;
+                        </p>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">The modern way to center a div.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <aside class="sidebar">
+             <div class="widget pokedex-widget">
+                 <h3 class="buddy-name">Bag Info</h3>
+                 <p>Select a berry to copy snippet.</p>
+             </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

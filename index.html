@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLog - Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="pokedex-sensor-array">
+                <div class="sensor-big"></div>
+                <div class="sensor-small red"></div>
+                <div class="sensor-small yellow"></div>
+                <div class="sensor-small green"></div>
+            </div>
+            <div class="logo">
+                <a href="#">&lt;PokeLog /&gt;</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">도감 (Dex)</a></li>
+                    <li><a href="types.html">스택 (Stack)</a></li>
+                    <li><a href="berries.html">도구 (Tools)</a></li>
+                    <li><a href="trainer.html">프로필 (Profile)</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="데이터 검색...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <!-- Pokeball Toggle -->
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <div class="pokeball-icon"></div>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main class="content-area">
+            
+            <!-- Featured Section (Will be populated by JS) -->
+            <section id="featured-post-container" class="featured-post">
+                <!-- Dynamic Content Loading... -->
+            </section>
+
+            <section class="recent-posts">
+                <h3 class="section-title">최신 기록 (Latest Entries)</h3>
+                
+                <div id="posts-container">
+                    <!-- Dynamic Posts Rendering Here -->
+                </div>
+
+            </section>
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span class="dots">...</span>
+                <a href="#" class="page-link">Next</a>
+            </div>
+
+        </main>
+
+        <aside class="sidebar">
+            <!-- Coding Buddy Widget -->
+            <div class="widget pokedex-widget">
+                <div class="pokedex-screen-header">
+                     <div class="tiny-lights">
+                        <span></span><span></span>
+                     </div>
+                </div>
+                <div class="pokedex-screen">
+                    <div id="buddy-container">
+                        <div class="loading-text">스캔 중...</div>
+                    </div>
+                </div>
+                <div class="pokedex-controls">
+                     <div class="d-pad"></div>
+                     <div class="action-btn"></div>
+                </div>
+                <h3 class="buddy-name" id="buddy-name">???</h3>
+                <p class="buddy-info">야생의 코딩 버디 출현 중...</p>
+                 <button id="refresh-buddy" class="refresh-btn">새로고침</button>
+            </div>
+
+            <!-- Wild Bug Battle Widget -->
+            <div class="widget battle-widget">
+                <h4 class="widget-title" style="color: var(--pk-red);">⚠️ 야생의 버그 출현!</h4>
+                <div class="battle-scene">
+                    <div class="enemy-area">
+                        <div class="hp-bar-container">
+                            <span class="hp-text">BUG</span>
+                            <div class="hp-bar"><div class="hp-fill" style="width: 100%;"></div></div>
+                        </div>
+                        <div class="enemy-sprite">👾</div>
+                    </div>
+                    <div class="battle-dialog-box">
+                        <p id="battle-text">야생의 SYNTAX ERROR(이)가 나타났다!</p>
+                        <div id="battle-options" class="battle-options-grid">
+                            <!-- Options injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget categories-widget">
+                <h4 class="widget-title">데이터 스택 (Stack)</h4>
+                <ul id="categories-list">
+                    <!-- Dynamic Categories -->
+                </ul>
+            </div>
+
+            <div class="widget tags-widget">
+                <h4 class="widget-title">Popular Tags</h4>
+                <div class="tag-cloud">
+                    <a href="#">#react</a>
+                    <a href="#">#css</a>
+                    <a href="#">#nodejs</a>
+                    <a href="#">#docker</a>
+                    <a href="#">#api</a>
+                    <a href="#">#frontend</a>
+                    <a href="#">#backend</a>
+                    <a href="#">#git</a>
+                </div>
+            </div>
+
+            <div class="widget newsletter-widget">
+                <h4 class="widget-title">Newsletter</h4>
+                <p>Get the latest posts delivered right to your inbox.</p>
+                <form>
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h3>&lt;DevLog /&gt;</h3>
+                <p>Building the web, one line of code at a time.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">RSS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 DevLog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
